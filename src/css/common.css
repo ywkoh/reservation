@@ -1,0 +1,444 @@
+
+@charset "utf-8";
+html {
+    color: #000;
+    background: #fff;
+    overflow-y: auto;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%
+}
+html * {
+    outline: 0;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+html,
+body {
+    font-family: sans-serif;
+    font-size: 15px;
+    height: 100%;
+    position: relative;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    min-height: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+article,aside,blockquote,body,button,code,dd,details,div,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}input,select,textarea{font-size:100%}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}abbr,acronym{border:0;font-variant:normal}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:500}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500}q:after,q:before{content:''}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a:hover{text-decoration:underline}a,ins{text-decoration:none}
+
+
+/* 스타일 정의 */
+
+html{font-size: 625%;}
+
+input[type=text]{
+    text-indent: 3px;
+}
+body.noscroll{overflow-y: hidden}
+button{
+    overflow: hidden;
+    border: 0;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline-color: transparent;
+    cursor: pointer;
+}
+.form_wrap .datepicker .picker .picker-items .row-item .item.selected:before,
+ .form_wrap .timepicker .picker .picker-items .row-item .item.selected:before, 
+ .form_wrap .datetime-picker .picker .picker-items .row-item .item.selected:before{
+    background: #EC6700;
+}
+/* drop down select : start */
+.select_wrap .selected{
+    position: relative;
+    width: 171px;
+    height: 30px;
+    border: 1px solid gray;
+    font-size: 15px;
+    border-radius: 3px;
+    text-align: left;
+}
+.select_wrap .selected > div{
+    text-indent: 10px;
+    white-space: nowrap;
+    font-size: 15px;
+}
+.select_wrap .selected > div:before{
+    content: '';
+    display: block;
+    position: absolute;
+    background: #333;
+    width: 1px;
+    height: 10px;
+    top: 10px;
+    right: 15px;
+    transform: rotate(45deg);
+}
+.select_wrap .selected > div:after{
+    content: '';
+    display: block;
+    position: absolute;
+    background: #333;
+    width: 1px;
+    height: 10px;
+    top: 10px;
+    right: 22px;
+    transform: rotate(135deg);
+}
+.select_wrap .dropdown{
+    position: absolute;
+    left:0;
+    top:29px;
+    background: #fff;
+    text-indent: 10px;
+}
+.select_wrap  ul > li{
+    height: 30px;
+    font-size: 15px;
+    line-height: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.select_wrap ul > li:hover{
+    background: #D4E9FF;
+}
+/* drop down select : end */
+.container{
+    overflow-x: hidden;
+}
+
+.app_body{
+    position: relative;
+    padding-bottom: 10px;
+    height: 800px;
+}
+.app_footer{
+    height:30px;
+}
+.dimmed{
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+}
+
+.popup{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -350px;
+    width: 700px;
+    background: #fff;
+    border-radius: 5px;
+    margin-top: -275px;
+}
+.popup_header{
+    position: relative;
+    height: 40px;
+    background: #EC6700;
+    color: #fff;
+    padding: 0 10px 0 20px;
+    border-radius: 5px 5px 0 0;
+}
+.popup_header h3{
+    line-height:40px;
+    font-size: 16px;
+}
+.popup_header .btn_close{
+    position: absolute;
+    right: 10px;
+    top: 0;
+    width: 40px;
+    height: 40px;
+}
+.popup_header .btn_close:before{
+    content: '';
+    display: block;
+    position: absolute;
+    background: #fff;
+    width: 1px;
+    height: 20px;
+    top: 10px;
+    right: 19px;
+    transform: rotate(45deg);
+}
+.popup_header .btn_close:after{
+    content: '';
+    display: block;
+    position: absolute;
+    background: #fff;
+    width: 1px;
+    height: 20px;
+    top: 10px;
+    right: 19px;
+    transform: rotate(135deg);
+}
+.popup_body{
+    height: 350px;
+    padding: 20px;
+}
+
+.row_wrap{
+    clear: both;
+    padding: 10px 0 20px 10px;
+}
+.row_wrap:after{
+    content: '';
+    clear: both;
+}
+.row_wrap.bdt{
+    border-top: 1px solid #e5e5e5;
+}
+.form_wrap{
+    position: relative;
+    height: 40px;
+    font-size: 15px;
+    float: left;
+}
+
+.popup_footer{
+    clear: both;
+    font-size: 15px;
+    height: 60px;
+    padding: 10px 0 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.btn_primary{
+    height: 30px;
+    font-size: 15px;
+    border-radius: 3px;
+    background: #4E4F64;
+    color: #fff;
+    border: 1px solid #4E4F64;
+}
+.btn_secondary{
+    height: 30px;
+    font-size: 15px;
+    border-radius: 3px;
+    background: #e5e5e5;
+    border: 1px solid #4E4F64;
+    color: #4E4F64;
+}
+/* table layout : start */
+.table {
+    border-collapse: collapse;
+    border-top: 1px solid #168;
+  }  
+  .table th {
+    color: #168;
+    background: #f0f6f9;
+    text-align: center;
+  }
+  .table th, .table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  .table th:first-child, .table td:first-child {
+    border-left: 0;
+  }
+  .table th:last-child, .table td:last-child {
+    border-right: 0;
+  }
+  .table tr td.left{
+    text-align: left;
+  }
+  .table caption{caption-side: bottom; display: none;}
+
+/* table layout : end */
+
+/* popup : start */
+
+.popup.edit{
+    width: 686px;
+    margin-left: -343px;
+}
+.popup.setting{
+    width: 470px;
+    margin-left: -235px;
+}
+.popup_body{
+    display: flex;
+    overflow-y: auto;
+}
+.popup_body.column{
+    flex-direction: column;
+}
+.popup_body .left_area{
+    width: 200px;
+    height: 100%;
+    padding: 0 20px 0 10px;
+}
+.popup_body .left_area ul li{
+    padding: 10px 0 5px 10px;
+    border-bottom: 1px solid #e5e5e5;
+    height: 48px;
+}
+.left_area label p{
+  font-size: 13px;
+  clear: both;
+  line-height: 22px;
+}
+.popup_body .right_area{
+    width: 700px;
+}
+.popup_body .select_wrap{
+    float: left;
+    position: relative;
+}
+.popup_footer .btn_regist{
+  float: right;
+}
+
+.popup_body .right_area label{
+  width: 100px;
+  float: left;
+  font-size: 16px;
+  line-height: 30px;
+  overflow:hidden;
+  }
+  .popup_body input[type=text]{
+      line-height: 28px;
+      font-size: 16px;
+      width: 171px;
+      box-sizing: border-box;
+  }
+  .popup_body input[type=radio]{
+      float:left;
+      line-height: 30px;
+      font-size: 16px;
+      width: 20px;
+      height: 20px;
+      box-sizing: border-box;
+      margin-right: 10px;
+  }
+  .popup_body input[type=radio] + label{
+      float:left;
+      line-height: 24px;
+      width: calc(100% - 30px);
+  }
+  .popup_body textarea{
+      width: 495px;
+      height: 90px;
+      padding: 5px;
+      box-sizing: border-box;
+  }
+  .form_wrap.memo{
+      height: 100px;
+  }
+  .btn_create{
+      width: 80px;
+  }
+  .btn_cancel{
+      width: 80px;
+  }
+  .btn_delete{
+      width: 80px;
+      color: red;
+  }
+  .select_wrap .dropdown{
+      width: 296px;
+      z-index: 100;
+  }
+  .select_wrap ul > li.on{
+      background: #EC6700;
+      color: #fff;
+  }
+  .datepicker{
+      float: left;
+      width: 171px;
+      height: .3rem;
+  }
+.dropdown_wrap{
+  position: absolute;
+  top: 29px;
+  height: 200px;
+  background: #fff;
+  width: 171px;
+  border: 1px solid #333;
+  z-index: 100;
+}
+.dropdown.scroll {
+  float: left;
+  position: absolute;
+  top: 10px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 200px;
+  width: 148px;
+}
+.btn_confirm{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #fff;
+  background: #4E4F64;
+  border: 1px solid #4E4F64;
+  border-radius: 3px;
+  width: 50px;
+  height: 20px;
+}
+.plain{
+  font-size: 16px;
+  line-height: 30px;
+}
+.time_wrap > button{
+  border: 1px solid #333;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  line-height: 27px;
+  border-radius: 3px;
+  margin-right: 2px;
+}
+.hour_label{
+  position: absolute;
+  left: 88px;
+  top: -15px;
+}
+.minute_label{
+  position: absolute;
+  left: 164px;
+  top: -15px;
+}
+.result_time{
+  position: absolute;
+  left: 316px;
+  top: 6px;
+  color:red;
+}
+.btn_plus.minute{
+  margin-left: 10px;
+}
+.row_wrap.options select{
+    width: 255px;
+    height: 30px;
+    float: left;
+}
+/* popup : end */
+
+.spinner_wrap{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.spinner{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: url('/images/common/Spinner200px.gif') no-repeat;
+    background-size: 100px 100px;
+    width: 100px;
+    height: 100px;
+}
